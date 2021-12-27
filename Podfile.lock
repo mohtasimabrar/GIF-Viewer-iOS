@@ -1,0 +1,16 @@
+PODS:
+  - JellyGif (1.0.2)
+
+DEPENDENCIES:
+  - JellyGif
+
+SPEC REPOS:
+  trunk:
+    - JellyGif
+
+SPEC CHECKSUMS:
+  JellyGif: 52b7569b7015f3b1ab2a6be30e4a81d47f974c97
+
+PODFILE CHECKSUM: 082aea3ab2ff16f41d984e875d1f203551693811
+
+COCOAPODS: 1.11.2
