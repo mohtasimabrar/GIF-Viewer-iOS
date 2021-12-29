@@ -9,44 +9,45 @@ import UIKit
 import JellyGif
 
 class ViewController: UIViewController {
-
+    //creating gif model object
+    var gifData = GIF()
+    //creating new path for storing
+    let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("gifData")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //creating decoder
-        let decoder = PropertyListDecoder()
-        
-        //checking if object exists
-        if let storedObject = UserDefaults.standard.object(forKey: "GIF") as? Data,
-           let decodedGIF = try? decoder.decode(GIF.self, from: storedObject)
-        {
-            //if the object is decoded, we load the gif and show toast
-            loadGif(decodedGIF)
+        //checking if data exists
+        if let storedData = FileManager.default.contents(atPath: self.path.path){
+            //if the data exists, we load the gif and show toast
+            self.gifData.data = storedData
+            loadGif(self.gifData)
             showToast(message: "Data from local storage")
             
         } else {
             //checking network connection
             if NetworkMonitor.shared.isConnected {
+                
+                //fetching gif data
                 let url = URL(string: "https://media1.giphy.com/media/zdt4666BOT6ktcfGvM/giphy.gif?cid=5222c33b4keq3hc4aygbhkaovbdcvvo5tax7ewvb7jqieptr&rid=giphy.gif&ct=g")
-                let Data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+                let Data = try? Data(contentsOf: url!)
                 
-                //creating model object from the fetched data
-                let gifData = GIF(data: Data!)
                 
-                //storing data using encoder
-                let encoder = PropertyListEncoder()
-                if let encodedGIF = try? encoder.encode(gifData) {
-                    UserDefaults.standard.set(encodedGIF, forKey: "GIF")
-                }
+                //updating object with fetched data
+                self.gifData.data = Data
+                
+                //storing data in path
+                try? Data!.write(to: self.path)
                 
                 //loading gif and showing toast
-                loadGif(gifData)
-                showToast(message: "data from internet")
+                loadGif(self.gifData)
+                showToast(message: "Data from internet")
                 
             } else {
-                
+            
                 //showing failed network toast
                 showToast(message: "Network Error")
+                
             }
             
         }

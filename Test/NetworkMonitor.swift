@@ -60,5 +60,4 @@ final class NetworkMonitor {
             connectionType = .unknown
         }
     }
-    
 }

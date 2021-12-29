@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct GIF: Codable {
+class GIF {
     //model contains only data property
-    let data: Data
+    public var data: Data!
+    
 }

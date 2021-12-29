@@ -47,11 +47,11 @@
 		694E2ECCF4ABA053BD07F507B958E183 /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
 		6B9EE3B4930621E10589D86A6D6BF636 /* Pods-Test-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Test-acknowledgements.plist"; sourceTree = "<group>"; };
 		6E9674311C9DC5180905474618BB10C8 /* Pods-Test */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Test"; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D71B574C3BA9587CDC62FFF4E0D1AAA /* JellyGif */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JellyGif; path = JellyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D71B574C3BA9587CDC62FFF4E0D1AAA /* JellyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JellyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBABF016747317DF94BF2ED4C8A0385 /* JellyGifAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyGifAnimator.swift; path = JellyGif/Source/JellyGifAnimator.swift; sourceTree = "<group>"; };
 		87006FD7FF0054A7BBADFAB1499F9274 /* JellyGifOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyGifOperation.swift; path = JellyGif/Source/JellyGifOperation.swift; sourceTree = "<group>"; };
 		9AD1C2B912CBA3E48B760B76D8A4B7CD /* JellyGif.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JellyGif.modulemap; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A50AB0AEBD37135F1BC4AC5A89A5F370 /* JellyGif-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JellyGif-Info.plist"; sourceTree = "<group>"; };
 		B961EB87DD27AC2614C5039740D8BB5B /* JellyGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JellyGif.release.xcconfig; sourceTree = "<group>"; };
 		CAB5C7085A9C5B50F7D60319F0AF1D6F /* JellyGifImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JellyGifImageView.swift; path = JellyGif/Source/Views/JellyGifImageView.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		97915BDDA313A3210E6C66160727084D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D71B574C3BA9587CDC62FFF4E0D1AAA /* JellyGif */,
+				7D71B574C3BA9587CDC62FFF4E0D1AAA /* JellyGif.framework */,
 				6E9674311C9DC5180905474618BB10C8 /* Pods-Test */,
 			);
 			name = Products;
@@ -185,7 +185,6 @@
 				87006FD7FF0054A7BBADFAB1499F9274 /* JellyGifOperation.swift */,
 				C9311366B4C73AFA16B3B59F63344CF4 /* Support Files */,
 			);
-			name = JellyGif;
 			path = JellyGif;
 			sourceTree = "<group>";
 		};
@@ -246,7 +245,7 @@
 			);
 			name = JellyGif;
 			productName = JellyGif;
-			productReference = 7D71B574C3BA9587CDC62FFF4E0D1AAA /* JellyGif */;
+			productReference = 7D71B574C3BA9587CDC62FFF4E0D1AAA /* JellyGif.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -256,7 +255,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -412,7 +411,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JellyGif/JellyGif-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JellyGif/JellyGif-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +447,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JellyGif/JellyGif-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JellyGif/JellyGif-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
